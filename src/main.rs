@@ -3,7 +3,6 @@ use clap::Parser;
 use colored::*;
 use regex::Regex;
 use std::process::Command;
-use std::time::Duration;
 
 /// Fast and efficient YouTube video clip downloader
 #[derive(Parser, Debug)]
@@ -199,14 +198,14 @@ fn download_clip(
         if (speed - 1.0).abs() > 0.01 {
             format!("{}_clip_{}-{}_{}x.mp4",
                     title,
-                    start_time.replace(':', '-'),
-                    end_time.replace(':', '-'),
+                    start_time.replace(':', "-"),
+                    end_time.replace(':', "-"),
                     speed)
         } else {
             format!("{}_clip_{}_{}.mp4",
                     title,
-                    start_time.replace(':', '-'),
-                    end_time.replace(':', '-'))
+                    start_time.replace(':', "-"),
+                    end_time.replace(':', "-"))
         }
     });
 

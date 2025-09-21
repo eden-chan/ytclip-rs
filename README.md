@@ -119,6 +119,22 @@ cargo run -- "URL" "START" "END"
 cargo test
 ```
 
+## Publishing
+
+To publish the crate to crates.io:
+
+1. Create an API token on crates.io and add it as a GitHub secret named `CARGO_REGISTRY_TOKEN`.
+2. Trigger the GitHub Actions workflow:
+   - Push a tag like `v1.0.0`, or
+   - Manually run the "Publish Crate" workflow from the Actions tab.
+
+You can also publish locally:
+
+```bash
+cargo login <YOUR_TOKEN>
+cargo publish
+```
+
 ## License
 
 MIT License - see LICENSE file for details

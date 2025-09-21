@@ -6,6 +6,9 @@ authors = ["Eden Chan"]
 description = "Fast and efficient YouTube video clip downloader"
 license = "MIT"
 repository = "https://github.com/eden-chan/ytclip-rs"
+readme = "README.md"
+keywords = ["youtube", "clip", "ffmpeg", "yt-dlp", "video"]
+exclude = ["*.mp4", "*.mov", "*.mkv", "*.webm", "*.avi", ".DS_Store", "tmp/**"]
 
 [[bin]]
 name = "ytclip"
